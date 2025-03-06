@@ -82,15 +82,6 @@ local default_plugins = {
   },
 
   {
-    "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
-    event = "InsertEnter",
-    config = function()
-      require("copilot").setup({})
-    end,
-  },
-
-  {
     "iamcco/markdown-preview.nvim",
     cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
     ft = { "markdown" },
@@ -155,14 +146,6 @@ local default_plugins = {
         opts = { history = true, updateevents = "TextChanged,TextChangedI" },
         config = function(_, opts)
           require("plugins.configs.others").luasnip(opts)
-        end,
-      },
-
-      {
-        -- copilot plugin
-        "zbirenbaum/copilot-cmp",
-        config = function()
-          require("copilot_cmp").setup()
         end,
       },
 
